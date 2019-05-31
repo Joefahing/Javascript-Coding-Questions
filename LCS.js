@@ -10,8 +10,9 @@
 
  var longesetCommonSubstring = function(s1, s2){
     
-    let memo = [...Array(s1.length)].map(e => Array(s2.length).fill(null));
-    return lcs(s1, s2 ,0 ,0, memo);
+    //let memo = [...Array(s1.length)].map(e => Array(s2.length).fill(null));
+    //return lcs(s1, s2 ,0 ,0, memo);
+    return lcsBottomUp(s1, s2);
  }
 
  function lcs(s1, s2, position1, position2, memo){
@@ -37,9 +38,31 @@
     
  }
 
- let string1 = "abacefaaplqpe";
- let string2 = "acbefnbapejf";
+ function lcsBottomUp(s1, s2){
+     
+    let memo = [...Array(s1.length + 1)].map(e => Array(s2.length + 1).fill(""));
 
- console.log(`The longest common substring is ${longesetCommonSubstring(string1, string2)}`)
+    for(let i = s1.length - 1; i >= 0; i--){
+            for(let j = s2.length - 1; j >= 0; j--){
+                
+                if(s1[i] == s2[j]){
+                    memo[i][j] = s1[i] + memo[i+1][j+1];
+                }
+                else{
+                    let result1 = memo[i][j+1];
+                    let result2 = memo[i+1][j];
+
+                    memo[i][j] = result1.length > result2.length ? result1 : result2;
+                }
+            }
+        }
+
+    return memo[0][0];
+ }
+
+ let string1 = "abacefaaplqpe";
+ let string2 = "acbefnbapejpe";
+
+ console.log(`Longest Common substring is ${longesetCommonSubstring(string1, string2)}`)
 
  
