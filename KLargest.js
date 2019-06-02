@@ -2,6 +2,11 @@
  * @param {number[]} nums
  * @param {number} k
  * @return {number}
+ * 
+ * to solve this problem, I decided to a heap to sort the nums. The complexity for sorting is 
+ * O(nlgn). To get the kth largest value, the time complexity will be O(k). Thus, the 
+ * total time complexity to get kth largest will be O(k + nlgn) which will be O(nlgn)
+ * The space complexity is O(1) because I only create constant amount of variables
  */
 var findKthLargest = function(nums, k) {
     
