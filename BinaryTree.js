@@ -7,15 +7,11 @@ function constructBinaryTree(nums, level, root){
     
     if(level < nums.length){
         root = new TreeNode(nums[level]);
-        root.right = constructBinaryTree(nums, 2*level+1, root.right);
-        root.left = constructBinaryTree(nums, 2*level+2, root.left);
+        root.left = constructBinaryTree(nums, 2*level+1, root.left);
+        root.right = constructBinaryTree(nums, 2*level+2, root.right);
     }
 
     return root;
-}
-
-function BinaryTree(nums){
-    this.root = constructBinaryTree(nums, 0, root);    
 }
 
 function height(treeRoot){
@@ -23,9 +19,12 @@ function height(treeRoot){
     return Math.max(height(treeRoot.right), height(treeRoot.left)) + 1;
 }
 
-let tree = new BinaryTree([4,2,3]);
+module.exports = (nums) => {
+    this.root = constructBinaryTree(nums, 0, root);
+    return this.root;    
+}
 
-console.log(height(tree.root));
+
 
 
 
