@@ -17,4 +17,6 @@
      return sortedFirst === sortedSecond;
  }
 
- console.log(CheckPermutation('abcebadfe', 'cba'));
+module.exports = {
+    CheckPermutation,
+}

@@ -14,17 +14,13 @@ let thirdCase = new MinStack();
 describe('Min Stack', ()=>{
     it('Should return 1', ()=>{
         assert.equal(firstCase.minVal(), 1);
-    })
-})
+    });
 
-describe('Min Stack', ()=>{
     it('Should return 0', ()=>{
         assert.equal(secondCase.minVal(), 0);
-    })
-})
+    });
 
-describe('Min Stack', ()=>{
     it('Should return null', ()=>{
         assert.equal(thirdCase.minVal(), null);
-    })
+    });
 })
