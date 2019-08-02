@@ -1,0 +1,24 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "run": "node main.js",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joefahing/Javascript-Coding-Questions.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joefahing/Javascript-Coding-Questions/issues"
+  },
+  "homepage": "https://github.com/Joefahing/Javascript-Coding-Questions#readme",
+  "description": "",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
