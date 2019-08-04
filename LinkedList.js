@@ -1,5 +1,5 @@
 function Node(value) {
-    this.var = value;
+    this.val = value;
     this.next = null;
 };
 
