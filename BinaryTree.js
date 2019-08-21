@@ -20,8 +20,9 @@ function height(treeRoot){
 }
 
 module.exports = (nums) => {
-    this.root = constructBinaryTree(nums, 0, root);
-    return this.root;    
+    let root = null;
+    root = constructBinaryTree(nums, 0, root);
+    return root;    
 }
 
 
