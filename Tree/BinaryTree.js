@@ -19,10 +19,9 @@ function height(treeRoot){
     return Math.max(height(treeRoot.right), height(treeRoot.left)) + 1;
 }
 
-module.exports = (nums) => {
-    let root = null;
-    root = constructBinaryTree(nums, 0, root);
-    return root;    
+module.exports = function(nums){
+    this.root = constructBinaryTree(nums, 0, root);
+    return this.root;    
 }
 
 

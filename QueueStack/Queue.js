@@ -25,6 +25,7 @@ class Queue {
     }
 }
 
+
 let queue = new Queue(0);
 queue.enqueue(1);
 queue.enqueue(3);
